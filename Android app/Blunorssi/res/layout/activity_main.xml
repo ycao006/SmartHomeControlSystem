@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/serialReveicedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:ems="10"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:layout_below="@+id/serialSendText"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Received Data:"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/serialSendText"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/buttonScan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="#555555"
+        android:bufferType="editable"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#999999"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:layout_alignParentTop="true"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/buttonSerialSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonScan"
+        android:layout_alignBottom="@+id/buttonScan"
+        android:layout_alignRight="@+id/serialSendText"
+        android:text="Send Data" />
+
+    <Button
+        android:id="@+id/buttonclose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/serialReveicedText"
+        android:layout_centerVertical="true"
+        android:text="close" />
+
+    <Button
+        android:id="@+id/buttonopen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialReveicedText"
+        android:layout_centerVertical="true"
+        android:text="open" />
+
+    <TextView
+        android:id="@+id/textrssi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonopen"
+        android:layout_below="@+id/buttonopen"
+        android:layout_marginTop="84dp"
+        android:text="Rssi:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
